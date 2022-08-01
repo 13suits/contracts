@@ -17,10 +17,13 @@ Thanks a ton, for real.
 There are four smart contracts included in this folder:
  - <b>BranchNFT.sol</b> -- this smart contract acts as the barcode for the product and is executable by anyone.
    - corresponds to BRANCH_NFT_ADDRESS on the front end
+    
  - <b>$NFT.sol</b> -- this smart contract is for the rewards token of the product and is also engaged in the claim function of the purchasing journey.
    - corresponds to TOKEN_ADDRESS on the front end
+    
  - <b>Payments.sol</b> -- this smart contract is the payment splitter, designating how much each owner is due to receive and is executable only by the owners. - 
    - corresponds to PAYMENT_ADDRESS on the front end
+   
  - <b>TrunkNFT.sol</b> -- this smart contract mints the owners of the product, who have exclusive access to view and claim their share of cash proceeds from sales of the product in real time.
    - currently not engaged on the front end
 
