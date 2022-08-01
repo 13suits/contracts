@@ -16,7 +16,7 @@ Thanks a ton, for real.
 
 These smart contracts should be examined, editted, and deployed on Remix IDE.
 
-Remix is incredible, and the tremendous amount of open-source resources available make it very difficult to take a long-term bearish stance on blockchain.
+Remix is incredible, and the tremendous amount of open-source resources available for blockchain development makes it very difficult to take a long-term bearish stance on blockchain.
 
 As such, it only makes sense that a tremendous proportion of transactions for physical products -- both offline and online -- will eventually take place fully on-chain -- i.e. full-chain transactions.
 
