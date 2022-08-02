@@ -8,13 +8,17 @@ import "https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC721.s
 
 contract PAYMENTS is PaymentSplitter {
     
-    constructor (address[] memory _payees, uint256[] memory _shares) PaymentSplitter(_payees, _shares) payable {}
+    address[] public ProductOwner = [0x98dfa9Bb43E698A8559C0e2Cde23EdfCA23Fd73b,0x6eAb15F002D41F90765b16712dE1001d306710d4,0xa7c978247ECB5DD05313d148DFFFc480Bfe7DdEe];
+    uint256[] public Stakes = [40,40,20];
+
+
+    
+    constructor (uint256[] memory _shares) PaymentSplitter(ProductOwner, _shares) payable {}
     
 }
 /**
-["0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db",
-"0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2",
-"0x5B38Da6a701c568545dCfcB03FcB875f56beddC4"]
+    address[] public ProductOwner = [0x98dfa9Bb43E698A8559C0e2Cde23EdfCA23Fd73b,0x6eAb15F002D41F90765b16712dE1001d306710d4,0xa7c978247ECB5DD05313d148DFFFc480Bfe7DdEe];
+
  */
 
 /** 
