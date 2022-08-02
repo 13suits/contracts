@@ -2,8 +2,8 @@
 
 pragma solidity ^0.8.7;
 
-import "./contracts/token/ERC721/extensions/ERC721Enumerable.sol";
-import "./contracts/access/Ownable.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/Ownable.sol";
 
 contract BranchNFT is ERC721Enumerable, Ownable {
     using Strings for uint256;
@@ -14,7 +14,7 @@ contract BranchNFT is ERC721Enumerable, Ownable {
     uint256 public maxMintAmount = 10;
     bool public paused = false;
     address payable payment;
-    address[] public NFTer = [0x4B20993Bc481177ec7E8f571ceCaE8A9e22C02db,0xAb8483F64d9C6d1EcF9b849Ae677dD3315835cb2,0x5B38Da6a701c568545dCfcB03FcB875f56beddC4];
+    address[] public ProductOwner = [0x98dfa9Bb43E698A8559C0e2Cde23EdfCA23Fd73b,0x6eAb15F002D41F90765b16712dE1001d306710d4,0xa7c978247ECB5DD05313d148DFFFc480Bfe7DdEe];
 
 
     constructor(
@@ -27,8 +27,8 @@ contract BranchNFT is ERC721Enumerable, Ownable {
         payment = payable(_payment);
     }
 
-    modifier onlyNFTer(){
-        require(msg.sender == NFTer[0] || msg.sender == NFTer[1] || msg.sender == NFTer[2]);
+    modifier onlyProductOwner(){
+        require(msg.sender == ProductOwner[0] || msg.sender == ProductOwner[1] || msg.sender == ProductOwner[2]);
         _;
     }
 
@@ -113,7 +113,7 @@ contract BranchNFT is ERC721Enumerable, Ownable {
         paused = _state;
     }
 
-    function withdraw() public payable onlyOwner() {
+    function withdraw() public payable onlyProductOwner() {
         (bool success, ) = payable(payment).call{
             value: address(this).balance
         }("");
