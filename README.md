@@ -12,6 +12,9 @@ HashLips: https://github.com/HashLips/solidity_smart_contracts
 
 Thanks a ton, for real.
 
+You can interact with the demo on desktop at the URL below:
+https://hardbank.io/
+
 ## How to Use
 
 These smart contracts should be examined, editted, and deployed on Remix IDE.
