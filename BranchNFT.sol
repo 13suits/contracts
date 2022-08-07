@@ -94,6 +94,23 @@ contract BranchNFT is ERC721Enumerable, Ownable {
         cost = _newCost;
     }
 
+    function transferFrom(
+        address from,
+        address to,
+        uint256 tokenId
+    ) public onlyOwner override(ERC721, IERC721) {
+        _transfer(from, to, tokenId);
+    }
+
+    function safeTransferFrom(
+        address from,
+        address to,
+        uint256 tokenId,
+        bytes memory data
+    ) public onlyOwner override(ERC721, IERC721) {
+        _safeTransfer(from, to, tokenId, data);
+    }
+
     function setmaxMintAmount(uint256 _newmaxMintAmount) public onlyOwner {
         maxMintAmount = _newmaxMintAmount;
     }
@@ -119,4 +136,6 @@ contract BranchNFT is ERC721Enumerable, Ownable {
         }("");
         require(success);
     }
+
+
 }
