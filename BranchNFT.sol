@@ -98,7 +98,7 @@ contract BranchNFT is ERC721Enumerable, Ownable {
         address from,
         address to,
         uint256 tokenId
-    ) public onlyOwner override(ERC721, IERC721) {
+    ) public onlyOwner override(ERC721) {
         _transfer(from, to, tokenId);
     }
 
@@ -107,7 +107,7 @@ contract BranchNFT is ERC721Enumerable, Ownable {
         address to,
         uint256 tokenId,
         bytes memory data
-    ) public onlyOwner override(ERC721, IERC721) {
+    ) public onlyOwner override(ERC721) {
         _safeTransfer(from, to, tokenId, data);
     }
 
